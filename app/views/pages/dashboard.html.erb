@@ -1,0 +1,20 @@
+<h1>Dashboard</h1>
+
+<div class="row">
+  <div class="col-md-4">
+    <h3>Books
+    <%= link_to 'New Book', new_book_path, class: 'btn btn-primary btn-sm' %>
+    </h3>
+    <%= render 'books' %>
+  </div>
+
+  <div class="col-md-4">
+    <h3>Purchases</h3>
+    <%= render 'purchased' %>
+  </div>
+
+  <div class="col-md-4">
+    <h3>Sales</h3>
+    <%= render 'sales' %>
+  </div>
+</div>
