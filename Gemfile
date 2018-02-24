@@ -6,7 +6,6 @@ git_source(:github) do |repo_name|
 end
 
 gem 'rails', '~> 5.1.4'
-gem 'sqlite3'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -18,7 +17,6 @@ gem 'simple_form'
 gem 'devise'
 gem 'cancan'
 gem 'paperclip', '~> 5.2.1'
-gem 'dotenv-rails', groups: [:development]
 gem 'aws-sdk', '~> 2.6'
 gem 'friendly_id', '~> 5.1.0'
 gem 'stripe'
@@ -39,6 +37,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'sqlite3'
+  gem 'dotenv-rails', groups: [:development]
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
