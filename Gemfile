@@ -21,6 +21,7 @@ gem 'paperclip', '~> 5.2.1'
 gem 'dotenv-rails', groups: [:development]
 gem 'aws-sdk', '~> 2.6'
 gem 'friendly_id', '~> 5.1.0'
+gem 'stripe'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
